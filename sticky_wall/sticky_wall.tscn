@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bu5canu85t7e1"]
+
+[ext_resource type="Script" uid="uid://ddq6ds8bsl47h" path="res://sticky_wall/src/sticky_wall.gd" id="1_xgfst"]
+[ext_resource type="Texture2D" uid="uid://pcifcv5vnt28" path="res://wal_smalll.png" id="2_xgfst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugj00"]
+size = Vector2(4, 4)
+
+[node name="StickyWall" type="Area2D" unique_id=1306053804]
+script = ExtResource("1_xgfst")
+width_base = 4.0
+height_base = 4.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1121764419]
+anchors_preset = -1
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_rotation = -6.2831855
+texture = ExtResource("2_xgfst")
+region_rect = Rect2(0, 0, 4, 4)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2032248320]
+shape = SubResource("RectangleShape2D_ugj00")

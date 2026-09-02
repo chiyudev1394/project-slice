@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dlr1lrp3pujmo"]
+
+[ext_resource type="PackedScene" uid="uid://bu5canu85t7e1" path="res://sticky_wall/sticky_wall.tscn" id="1_wrgtl"]
+[ext_resource type="PackedScene" uid="uid://c12xuskm361ry" path="res://player/player.tscn" id="2_hi6ds"]
+
+[node name="PlayGround" type="Node2D" unique_id=1883486659]
+
+[node name="Box" type="Node2D" parent="." unique_id=75352283]
+position = Vector2(320, 176)
+
+[node name="StickyWall1" parent="Box" unique_id=1306053804 instance=ExtResource("1_wrgtl")]
+position = Vector2(0, -128)
+width_scale = 97.0
+
+[node name="StickyWall2" parent="Box" unique_id=820799604 instance=ExtResource("1_wrgtl")]
+position = Vector2(192, 0)
+height_scale = 63.0
+
+[node name="StickyWall3" parent="Box" unique_id=91555869 instance=ExtResource("1_wrgtl")]
+position = Vector2(0, 128)
+width_scale = 97.0
+
+[node name="StickyWall4" parent="Box" unique_id=1976609629 instance=ExtResource("1_wrgtl")]
+position = Vector2(-192, 0)
+height_scale = 63.0
+
+[node name="Player" parent="." unique_id=726853529 instance=ExtResource("2_hi6ds")]
+position = Vector2(312, 248)
