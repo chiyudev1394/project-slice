@@ -25,3 +25,10 @@ func _process(delta: float) -> void:
 	
 	# setup collision shape
 	collision_shape.scale = Vector2(width_scale, height_scale)
+
+
+func sliced(slicer: Node2D, slice_pos : Vector2) -> bool:
+	print("Sliced at relative vector: ", slice_pos - global_position)
+	slicer.reparent(self)
+	slicer.position = slice_pos - global_position
+	return false
