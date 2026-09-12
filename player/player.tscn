@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://jymkebho6tbu" path="res://icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://c50bht2h6ply" path="res://player/src/player.gd" id="1_rkbax"]
 
-[node name="Player" type="Node2D" unique_id=726853529]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd5rv"]
+size = Vector2(12, 12)
+
+[node name="Player" type="Area2D" unique_id=1210493534]
 script = ExtResource("1_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=892848279]
@@ -13,3 +16,6 @@ texture = ExtResource("1_oul6g")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=300170340]
 target_position = Vector2(32, 0)
 collide_with_areas = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=620434888]
+shape = SubResource("RectangleShape2D_cd5rv")

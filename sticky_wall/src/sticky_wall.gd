@@ -1,5 +1,6 @@
 @tool
 extends Area2D
+class_name Wall
 
 @export var width_scale : float = 1.0
 @export var height_scale : float = 1.0
@@ -27,8 +28,10 @@ func _process(delta: float) -> void:
 	collision_shape.scale = Vector2(width_scale, height_scale)
 
 
-func sliced(slicer: Node2D, slice_pos : Vector2) -> bool:
+func sliced(slicer: Node2D, slice_pos : Vector2, slice_normal : Vector2) -> bool:
 	print("Sliced at relative vector: ", slice_pos - global_position)
-	slicer.reparent(self)
-	slicer.position = slice_pos - global_position
+	slicer.position = slice_pos
+	slicer.position += slice_normal * slicer.get_size() / 2
+	slicer.sprite.rotation = slice_normal.angle() + PI / 2
+	slicer.collision_shape.rotation = slice_normal.angle() + PI / 2
 	return false
