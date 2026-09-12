@@ -10,7 +10,6 @@ size = Vector2(4, 4)
 script = ExtResource("1_xgfst")
 width_base = 4.0
 height_base = 4.0
-normal_vec = Vector2(0, 0)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1121764419]
 anchors_preset = -1

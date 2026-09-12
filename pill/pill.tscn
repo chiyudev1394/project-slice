@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c6sc5gj3yd7fp"]
+
+[ext_resource type="Texture2D" uid="uid://jymkebho6tbu" path="res://icon.svg" id="1_byojs"]
+[ext_resource type="Script" uid="uid://ck3guokq8xkf1" path="res://pill/src/pill.gd" id="1_mpg28"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ugj00"]
+radius = 12.0
+
+[node name="Pill" type="Area2D" unique_id=999493875]
+script = ExtResource("1_mpg28")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1095576047]
+scale = Vector2(0.12499999, 0.12499999)
+texture = ExtResource("1_byojs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861246933]
+shape = SubResource("CircleShape2D_ugj00")
