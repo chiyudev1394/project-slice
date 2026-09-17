@@ -1,4 +1,5 @@
 extends Area2D
+class_name Pill
 
 @export var score_points : float = 0.0
 

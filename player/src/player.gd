@@ -53,13 +53,14 @@ func _physics_process(delta: float) -> void:
 	
 	#print(len(collide_objects))
 	
-	var first_wall : bool = true
+	var first_wall_touched : bool = false
 	
 	for i in range(len(collide_objects)):
-		collide_objects[i].sliced(self, collide_positions[i], collide_normal[i])
+		if not first_wall_touched:
+			collide_objects[i].sliced(self, collide_positions[i], collide_normal[i])
 		
-		if first_wall and collide_objects[i] is Wall:
-			first_wall = false
+		if collide_objects[i] is Wall:
+			first_wall_touched = true
 		ray_cast.remove_exception(collide_objects[i])
 
 
