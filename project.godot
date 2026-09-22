@@ -13,7 +13,7 @@ config_version=5
 config/name="project-slice"
 run/main_scene="uid://dlr1lrp3pujmo"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Resources/icon.svg"
 
 [display]
 

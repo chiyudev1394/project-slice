@@ -63,23 +63,27 @@ func _physics_process(delta: float) -> void:
 			first_wall_touched = true
 		ray_cast.remove_exception(collide_objects[i])
 
-
 func _update_ray_cast_target() -> void:
 	var x_coef : float = INF
 	var y_coef : float = INF
 	var viewport_size : Vector2 = get_viewport().get_visible_rect().size
+	var global_jump_dir : Vector2 = (get_global_mouse_position() - self.global_position).normalized()
+	print(global_jump_dir)
 	
-	if jump_dir.x < 0.0:
-		x_coef = - global_position.x / jump_dir.x
-	elif jump_dir.x > 0.0:
-		x_coef = (viewport_size.x - global_position.x) / jump_dir.x
+	if global_jump_dir.x < 0.0:
+		x_coef = - self.global_position.x / global_jump_dir.x
+	elif global_jump_dir.x > 0.0:
+		x_coef = (viewport_size.x - self.global_position.x) / global_jump_dir.x
 	
-	if jump_dir.y < 0.0:
-		y_coef = - global_position.y / jump_dir.y
-	elif jump_dir.y > 0.0:
-		y_coef = (viewport_size.y - global_position.y) / jump_dir.y
+	if global_jump_dir.y < 0.0:
+		y_coef = - self.global_position.y / global_jump_dir.y
+	elif global_jump_dir.y > 0.0:
+		y_coef = (viewport_size.y - self.global_position.y) / global_jump_dir.y
+	
+	print(x_coef, y_coef)
 	
 	ray_cast.target_position = min(x_coef, y_coef) * jump_dir
+	#ray_cast.target_position = 500 * jump_dir
 	#shape_cast.target_position = ray_cast.target_position
 	#print(ray_cast.target_position)
 
@@ -94,7 +98,9 @@ func _process(delta: float) -> void:
 	cur_life_time -= delta
 	
 	# calculate hero looking direction
-	var new_jump_dir : Vector2 = get_global_mouse_position() - self.global_position
+	var new_jump_dir : Vector2 = to_local(get_global_mouse_position())
+	#print(new_jump_dir)
+	#print(ray_cast.position)
 	
 	if new_jump_dir != Vector2.ZERO:
 		jump_dir = new_jump_dir.normalized()

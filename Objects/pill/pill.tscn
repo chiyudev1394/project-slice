@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6sc5gj3yd7fp"]
 
-[ext_resource type="Texture2D" uid="uid://jymkebho6tbu" path="res://icon.svg" id="1_byojs"]
-[ext_resource type="Script" uid="uid://ck3guokq8xkf1" path="res://pill/src/pill.gd" id="1_mpg28"]
+[ext_resource type="Texture2D" uid="uid://jymkebho6tbu" path="res://Resources/icon.svg" id="1_byojs"]
+[ext_resource type="Script" uid="uid://ck3guokq8xkf1" path="res://Objects/pill/src/pill.gd" id="1_mpg28"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ugj00"]
 radius = 12.0

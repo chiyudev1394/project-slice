@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0wlhfiqih766"]
 
-[ext_resource type="Texture2D" uid="uid://k1y1n7ir4jh4" path="res://aseprite_files/spike.png" id="1_32npk"]
-[ext_resource type="Script" uid="uid://dkckgokf34giv" path="res://spike/src/spike.gd" id="1_mpeh1"]
+[ext_resource type="Texture2D" uid="uid://k1y1n7ir4jh4" path="res://Resources/aseprite_files/spike.png" id="1_32npk"]
+[ext_resource type="Script" uid="uid://dkckgokf34giv" path="res://Objects/spike/src/spike.gd" id="1_mpeh1"]
 
 [node name="Spike" type="Area2D" unique_id=1576750808]
 script = ExtResource("1_mpeh1")
