@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pcifcv5vnt28"
-path="res://.godot/imported/wal_smalll.png-3b5203d786b3e9936ae695ed1add3cde.ctex"
+path="res://.godot/imported/wall_small.png-1ee0e87c1bda313973c52ebda4992cd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/wal_smalll.png"
-dest_files=["res://.godot/imported/wal_smalll.png-3b5203d786b3e9936ae695ed1add3cde.ctex"]
+source_file="res://Resources/wall_small.png"
+dest_files=["res://.godot/imported/wall_small.png-1ee0e87c1bda313973c52ebda4992cd6.ctex"]
 
 [params]
 

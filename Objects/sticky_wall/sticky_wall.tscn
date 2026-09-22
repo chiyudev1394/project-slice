@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bu5canu85t7e1"]
 
 [ext_resource type="Script" uid="uid://ddq6ds8bsl47h" path="res://Objects/sticky_wall/src/sticky_wall.gd" id="1_xgfst"]
-[ext_resource type="Texture2D" uid="uid://pcifcv5vnt28" path="res://Resources/wal_smalll.png" id="2_xgfst"]
+[ext_resource type="Texture2D" uid="uid://pcifcv5vnt28" path="res://Resources/wall_small.png" id="2_xgfst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugj00"]
 size = Vector2(4, 4)
