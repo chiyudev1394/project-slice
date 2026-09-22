@@ -94,7 +94,7 @@ func _process(delta: float) -> void:
 	cur_life_time -= delta
 	
 	# calculate hero looking direction
-	var new_jump_dir : Vector2 = get_global_mouse_position() - global_position
+	var new_jump_dir : Vector2 = get_global_mouse_position() - self.global_position
 	
 	if new_jump_dir != Vector2.ZERO:
 		jump_dir = new_jump_dir.normalized()

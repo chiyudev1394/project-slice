@@ -30,8 +30,9 @@ func _process(delta: float) -> void:
 
 func sliced(slicer: Node2D, slice_pos : Vector2, slice_normal : Vector2) -> bool:
 	print("Sliced at relative vector: ", slice_pos - global_position)
-	slicer.position = slice_pos
+	slicer.global_position = slice_pos
 	slicer.position += slice_normal * slicer.get_size() / 2
 	slicer.sprite.rotation = slice_normal.angle() + PI / 2
 	slicer.collision_shape.rotation = slice_normal.angle() + PI / 2
+	slicer.reparent(self)
 	return false
