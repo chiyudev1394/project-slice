@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bu5canu85t7e1" path="res://Objects/sticky_wall/sticky_wall.tscn" id="3_kqrft"]
 [ext_resource type="PackedScene" uid="uid://b0wlhfiqih766" path="res://Objects/spike/spike.tscn" id="4_rwdsh"]
 [ext_resource type="PackedScene" uid="uid://c12xuskm361ry" path="res://Objects/player/player.tscn" id="5_1hp5s"]
+[ext_resource type="PackedScene" uid="uid://c5v3wlrde7op2" path="res://UI/dead_screen/dead_screen.tscn" id="6_heyva"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tr26a"]
 bg_color = Color(0, 0, 0, 1)
@@ -34,6 +35,7 @@ position = Vector2(376, 112)
 score_points = 2.0
 
 [node name="Box" type="Node2D" parent="." unique_id=75352283]
+unique_name_in_owner = true
 position = Vector2(320, 192)
 
 [node name="StickyWall1" parent="Box" unique_id=1306053804 instance=ExtResource("3_kqrft")]
@@ -89,15 +91,34 @@ scale = Vector2(0.99999994, 0.99999994)
 height_scale = 6.0
 
 [node name="Player" parent="." unique_id=726853529 instance=ExtResource("5_1hp5s")]
+unique_name_in_owner = true
 position = Vector2(320, 192)
 max_life_time = 5.0
 
-[node name="PlayerHealthBar" type="ProgressBar" parent="." unique_id=1175665078]
-offset_left = 216.0
-offset_top = 8.0
-offset_right = 424.0
-offset_bottom = 35.0
+[node name="UI" type="Control" parent="." unique_id=991236066]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="UI" unique_id=1175665078]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.044444446
+anchor_right = 0.5
+anchor_bottom = 0.044444446
+offset_left = -104.0
+offset_right = 104.0
+offset_bottom = 27.0
+grow_horizontal = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_tr26a")
 theme_override_styles/fill = SubResource("StyleBoxFlat_j7sjd")
 max_value = 10.0
 show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="DeadScreen" parent="UI" unique_id=905657974 instance=ExtResource("6_heyva")]
+unique_name_in_owner = true
+layout_mode = 1
