@@ -68,7 +68,6 @@ func _update_ray_cast_target() -> void:
 	var y_coef : float = INF
 	var viewport_size : Vector2 = get_viewport().get_visible_rect().size
 	var global_jump_dir : Vector2 = (get_global_mouse_position() - self.global_position).normalized()
-	print(global_jump_dir)
 	
 	if global_jump_dir.x < 0.0:
 		x_coef = - self.global_position.x / global_jump_dir.x
@@ -79,8 +78,6 @@ func _update_ray_cast_target() -> void:
 		y_coef = - self.global_position.y / global_jump_dir.y
 	elif global_jump_dir.y > 0.0:
 		y_coef = (viewport_size.y - self.global_position.y) / global_jump_dir.y
-	
-	print(x_coef, y_coef)
 	
 	ray_cast.target_position = min(x_coef, y_coef) * jump_dir
 	#ray_cast.target_position = 500 * jump_dir
