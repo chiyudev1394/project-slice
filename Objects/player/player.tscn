@@ -9,6 +9,11 @@ size = Vector2(12, 12)
 [node name="Player" type="Area2D" unique_id=1210493534]
 script = ExtResource("1_rkbax")
 
+[node name="Laser" type="Line2D" parent="." unique_id=875803211]
+points = PackedVector2Array(0, 0, 10, 0)
+width = 2.0
+default_color = Color(0, 0.73, 0.17033336, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=892848279]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_oul6g")
