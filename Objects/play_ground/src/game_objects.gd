@@ -22,4 +22,4 @@ func _process(delta: float) -> void:
 	if player != null:
 		player_hp_bar.value = player.cur_life_time
 	
-	box.rotate(1 * delta)
+	#box.rotation = deg_to_rad(45)

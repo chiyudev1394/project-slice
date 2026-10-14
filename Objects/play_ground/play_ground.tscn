@@ -25,64 +25,47 @@ script = ExtResource("2_kqrft")
 
 [node name="Player" parent="GameObjects" unique_id=726853529 instance=ExtResource("5_1hp5s")]
 unique_name_in_owner = true
-position = Vector2(320, 192)
+position = Vector2(310, 170)
 max_life_time = 5.0
 
 [node name="Box" type="Node2D" parent="GameObjects" unique_id=75352283]
 unique_name_in_owner = true
-position = Vector2(320, 192)
+position = Vector2(320, 200)
 
 [node name="StickyWall1" parent="GameObjects/Box" unique_id=1306053804 instance=ExtResource("3_kqrft")]
-position = Vector2(0, -128)
-width_scale = 63.0
+position = Vector2(0, -150)
+width_scale = 139.0
+push_normal = Vector2(0, 1)
 
 [node name="Spike1" parent="GameObjects/Box/StickyWall1" unique_id=1576750808 instance=ExtResource("4_rwdsh")]
-position = Vector2(88, 0)
+position = Vector2(71, 2)
 rotation = -3.1415925
 
 [node name="StickyWall2" parent="GameObjects/Box" unique_id=820799604 instance=ExtResource("3_kqrft")]
-position = Vector2(128, 0)
-height_scale = 63.0
+position = Vector2(280, 0)
+height_scale = 76.0
+push_normal = Vector2(-1, 0)
 
 [node name="Spike1" parent="GameObjects/Box/StickyWall2" unique_id=1052278066 instance=ExtResource("4_rwdsh")]
-position = Vector2(0, -40)
+position = Vector2(-2, -40)
 rotation = -1.5707964
 
 [node name="StickyWall3" parent="GameObjects/Box" unique_id=91555869 instance=ExtResource("3_kqrft")]
-position = Vector2(0, 128)
-width_scale = 63.0
+position = Vector2(0, 150)
+width_scale = 139.0
+push_normal = Vector2(0, -1)
 
 [node name="Spike1" parent="GameObjects/Box/StickyWall3" unique_id=1358565719 instance=ExtResource("4_rwdsh")]
+position = Vector2(45, -2)
 
 [node name="StickyWall4" parent="GameObjects/Box" unique_id=1976609629 instance=ExtResource("3_kqrft")]
-position = Vector2(-128, 1.5258789e-05)
-height_scale = 63.0
+position = Vector2(-280, 0)
+height_scale = 76.0
+push_normal = Vector2(1, 0)
 
 [node name="Spike1" parent="GameObjects/Box/StickyWall4" unique_id=1882712100 instance=ExtResource("4_rwdsh")]
+position = Vector2(2, 17)
 rotation = 1.5707964
-
-[node name="StickyWall5" parent="GameObjects/Box" unique_id=711185184 instance=ExtResource("3_kqrft")]
-position = Vector2(-120, -120)
-rotation = 0.7853982
-height_scale = 6.0
-
-[node name="StickyWall6" parent="GameObjects/Box" unique_id=1901702673 instance=ExtResource("3_kqrft")]
-position = Vector2(119.999985, 120)
-rotation = 0.7853982
-scale = Vector2(0.99999994, 0.99999994)
-height_scale = 6.0
-
-[node name="StickyWall7" parent="GameObjects/Box" unique_id=306087228 instance=ExtResource("3_kqrft")]
-position = Vector2(-120.000015, 120.000015)
-rotation = -0.7853982
-scale = Vector2(0.99999994, 0.99999994)
-height_scale = 6.0
-
-[node name="StickyWall8" parent="GameObjects/Box" unique_id=1007151511 instance=ExtResource("3_kqrft")]
-position = Vector2(119.999985, -120)
-rotation = -0.7853982
-scale = Vector2(0.99999994, 0.99999994)
-height_scale = 6.0
 
 [node name="Pills" type="Node2D" parent="GameObjects" unique_id=1910510820]
 
@@ -120,9 +103,9 @@ process_mode = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.044444446
+anchor_top = 0.027777778
 anchor_right = 0.5
-anchor_bottom = 0.044444446
+anchor_bottom = 0.027777778
 offset_left = -104.0
 offset_right = 104.0
 offset_bottom = 27.0

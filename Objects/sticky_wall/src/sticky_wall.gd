@@ -8,6 +8,8 @@ class_name Wall
 @export var width_base : float = 16.0
 @export var height_base : float = 16.0
 
+@export var push_normal : Vector2 = Vector2.ZERO
+
 @onready var nine_patch : NinePatchRect = $NinePatchRect
 @onready var collision_shape : CollisionShape2D = $CollisionShape2D
 
@@ -16,6 +18,20 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		collision_shape.shape.size = Vector2(width_base, height_base)
 
+func _move_objects_out() -> void: 
+	var overlap_obj : Array[Area2D] = self.get_overlapping_areas()
+	
+	for obj in overlap_obj:
+		print(self.global_rotation)
+		obj.global_position += push_normal.rotated(self.global_rotation)
+		
+	#overlap_obj = self.get_overlapping_areas()
+	
+	for obj in overlap_obj:
+		var overlap_obj_pos = self.to_local(obj.global_position)
+		var overlap_obj_angle = overlap_obj_pos.angle()
+		print(obj, overlap_obj_angle)
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -26,6 +42,7 @@ func _process(delta: float) -> void:
 	
 	# setup collision shape
 	collision_shape.scale = Vector2(width_scale, height_scale)
+	self._move_objects_out()
 
 
 func sliced(slicer: Node2D, slice_pos : Vector2, slice_normal : Vector2) -> bool:

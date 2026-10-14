@@ -7,9 +7,11 @@
 size = Vector2(4, 4)
 
 [node name="StickyWall" type="Area2D" unique_id=1306053804]
+collision_layer = 2
 script = ExtResource("1_xgfst")
 width_base = 4.0
 height_base = 4.0
+push_normal = null
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1121764419]
 anchors_preset = -1
