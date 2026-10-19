@@ -33,16 +33,17 @@ func _move_objects_out() -> void:
 		print(obj, overlap_obj_angle)
 		
 
+func _physics_process(delta: float) -> void:
+	self._move_objects_out()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#if Engine.is_editor_hint():
 	# setup nine patch rect
 	nine_patch.size = Vector2(width_base, height_base) * Vector2(width_scale, height_scale)
 	nine_patch.position = -0.5 * nine_patch.size
 	
 	# setup collision shape
 	collision_shape.scale = Vector2(width_scale, height_scale)
-	self._move_objects_out()
 
 
 func sliced(slicer: Node2D, slice_pos : Vector2, slice_normal : Vector2) -> bool:

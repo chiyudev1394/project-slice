@@ -11,9 +11,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+# method that makes pills invisiable and not solid
+func deactivate() -> void:
+	self.visible = false
+
 func sliced(slicer: Node2D, slice_pos : Vector2, slice_normal : Vector2) -> bool:
-	print("Pill is sliced at relative vector: ", slice_pos - global_position)
+	#print("Pill is sliced at relative vector: ", slice_pos - global_position)
 	slicer.cur_life_time = min(slicer.cur_life_time + score_points, slicer.max_life_time)
-	print(slicer.cur_life_time) 
-	self.call_deferred("queue_free")
+	#print(slicer.cur_life_time) 
+	self.deactivate()
+	#self.call_deferred("queue_free")
 	return false
