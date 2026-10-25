@@ -30,7 +30,7 @@ func _move_objects_out() -> void:
 	for obj in overlap_obj:
 		var overlap_obj_pos = self.to_local(obj.global_position)
 		var overlap_obj_angle = overlap_obj_pos.angle()
-		print(obj, overlap_obj_angle)
+		#print(obj, overlap_obj_angle)
 		
 
 func _physics_process(delta: float) -> void:
@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 
 
 func sliced(slicer: Node2D, slice_pos : Vector2, slice_normal : Vector2) -> bool:
-	print("Sliced at relative vector: ", slice_pos - global_position)
+	#print("Sliced at relative vector: ", slice_pos - global_position)
 	slicer.global_position = slice_pos
 	slicer.global_position += slice_normal * slicer.get_size() / 2
 	slicer.sprite.global_rotation = slice_normal.angle() + PI / 2

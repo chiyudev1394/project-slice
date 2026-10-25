@@ -89,6 +89,9 @@ score_points = 2.0
 position = Vector2(376, 112)
 score_points = 2.0
 
+[node name="PillRespawnTimer" type="Timer" parent="GameObjects/Pills" unique_id=1839607532]
+wait_time = 2.0
+
 [node name="UI" type="Control" parent="." unique_id=991236066]
 unique_name_in_owner = true
 process_mode = 3
